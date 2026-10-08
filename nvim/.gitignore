@@ -1,0 +1,8 @@
+# Ignorar las carpetas donde Lazy descarga los plugins y librerías
+.lazy/
+lazy-repo/
+
+# Ignorar archivos temporales o de estado de Neovim si existieran aquí
+.netrwhist
+*.log
+
