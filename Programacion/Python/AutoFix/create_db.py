@@ -1,7 +1,9 @@
+# Este es el modulo para crear la base de datos
 import sqlite3
 
 
 def init_db():
+    # Conexión con la base de datos
     con = sqlite3.connect("Sql.db")
     cur = con.cursor()
 
