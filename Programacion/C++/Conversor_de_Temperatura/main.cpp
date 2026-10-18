@@ -1,6 +1,5 @@
 #include <iostream>
 #include <ostream>
-#include <type_traits>
 
 using namespace std;
 
@@ -31,7 +30,7 @@ int main() {
   bool continuar = true;
 
   while (continuar) {
-    cout << "Selecciona una opción\n1. °F\n2. °C\n3. K\n4. Salir\n";
+    cout << "\nSelecciona una opción\n1. °F\n2. °C\n3. K\n4. Salir\n";
     cout << "Ingrese un numero(1-4): ";
     cin >> option;
 
