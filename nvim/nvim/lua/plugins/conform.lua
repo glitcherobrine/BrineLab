@@ -22,6 +22,10 @@ return {
 				css = { "prettier" },
 				markdown = { "prettier" },
 				html = { "prettier" },
+				javascript = { "prettier" },
+				typescript = { "prettier" },
+				javascriptreact = { "prettier" },
+				typescriptreact = { "prettier" },
 			},
 			default_format_opts = {
 				lsp_format = "fallback",

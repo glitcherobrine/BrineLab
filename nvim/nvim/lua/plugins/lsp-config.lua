@@ -12,11 +12,13 @@ return {
 			-- Lista exacta de tus herramientas externas visualizadas en Mason
 			require("mason-tool-installer").setup({
 				ensure_installed = {
-					"prettier",             -- Formateador para HTML/CSS/JS
-					"codelldb",             -- Depurador para C/C++/Rust
-					"debugpy",              -- Depurador para Python
-					"java-debug-adapter",    -- Depurador para Java
-					"java-test",            -- Suite de pruebas para Java
+					"prettier", -- Formateador para HTML/CSS/JS
+					"codelldb", -- Depurador para C/C++/Rust
+					"debugpy", -- Depurador para Python
+					"java-debug-adapter", -- Depurador para Java
+					"java-test", -- Suite de pruebas para Java
+					"stylua",
+					"beautysh",
 				},
 				auto_update = false,
 				run_on_start = true,
@@ -28,17 +30,18 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			-- Todos tus LSPs agregados para instalación 100% automática
-			ensure_installed = { 
-				"bashls", 
-				"clangd", 
-				"cssls", 
-				"emmet_language_server", 
-				"html", 
-				"jdtls", 
-				"lua_ls", 
-				"pylsp", 
-				"rust_analyzer", 
-				"terraformls" 
+			ensure_installed = {
+				"bashls",
+				"clangd",
+				"cssls",
+				"emmet_language_server",
+				"html",
+				"jdtls",
+				"lua_ls",
+				"pylsp",
+				"rust_analyzer",
+				"terraformls",
+				"vtsls",
 			},
 			auto_install = true,
 		},
@@ -49,18 +52,19 @@ return {
 		config = function()
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			local lspconfig = require("lspconfig")
-			
+
 			-- Servidores que se acoplan al bucle estándar (dejando fuera jdtls)
-			local servers = { 
-				"bashls", 
-				"clangd", 
-				"cssls", 
-				"emmet_language_server", 
-				"html", 
-				"lua_ls", 
-				"pylsp", 
-				"rust_analyzer", 
-				"terraformls" 
+			local servers = {
+				"bashls",
+				"clangd",
+				"cssls",
+				"emmet_language_server",
+				"html",
+				"lua_ls",
+				"pylsp",
+				"rust_analyzer",
+				"terraformls",
+				"vtsls"
 			}
 
 			for _, server in ipairs(servers) do
@@ -78,4 +82,3 @@ return {
 		end,
 	},
 }
-
