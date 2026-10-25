@@ -11,7 +11,8 @@ button.addEventListener("click", function () {
   if (temperature.value === "") {
     alert("ingrese su temperatura");
   } else {
-    console.log(`ingresó estos ${num} grados centigrados`);
-    console.log(`Son ${C_a_F(num)}`);
+    console.log(`ingresó ${num}°C`);
+    console.log(`Son ${C_a_F(num)}°F`);
+    document.getElementById("result").innerHTML = `Son ${C_a_F(num)°F}`;
   }
 });
