@@ -62,9 +62,8 @@ return {
 				"html",
 				"lua_ls",
 				"pylsp",
-				"rust_analyzer",
 				"terraformls",
-				"vtsls"
+				"vtsls",
 			}
 
 			for _, server in ipairs(servers) do
